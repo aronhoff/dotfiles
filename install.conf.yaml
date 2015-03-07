@@ -6,6 +6,7 @@
     ~/.zshrc: zshrc
     ~/.gitconfig: gitconfig
     ~/scripts: scripts
+    ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting: zsh-syntax-highlighting/
     ~/.gitignore: gitignore
 
 - shell:
