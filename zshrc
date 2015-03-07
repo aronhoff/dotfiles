@@ -80,7 +80,12 @@ export EDITOR="vim"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias variety="/opt/extras.ubuntu.com/variety/bin/variety"
 alias soundfetch="~/scripts/soundfetch.sh"
+#alias variety="/opt/extras.ubuntu.com/variety/bin/variety"
+alias vt="variety -t"
+alias vn="variety -n"
+alias vp="variety -p"
+alias vf="variety -f"
+alias vrd="variety --downloads"
 
 archey3
