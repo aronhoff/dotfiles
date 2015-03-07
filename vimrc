@@ -140,3 +140,6 @@ Plugin 'bling/vim-airline'
 Plugin 'nathanaelkane/vim-indent-guides'
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+nnoremap : ;
+nnoremap ; :
