@@ -85,7 +85,9 @@ alias soundfetch="~/scripts/soundfetch.sh"
 alias vt="variety -t"
 alias vn="variety -n"
 alias vp="variety -p"
-alias vf="variety -f"
+alias vf="variety --move-to-favorites"
 alias vrd="variety --downloads"
+alias vc="variety --current"
+alias vh="variety --history"
 
 archey3
