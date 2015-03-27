@@ -48,6 +48,7 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(archlinux chucknorris sudo systemd web-search wd zsh-syntax-highlighting git)
 
 source $ZSH/oh-my-zsh.sh
+source ~/Developer/dotfiles/k/k.sh
 
 # User configuration
 
