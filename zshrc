@@ -92,3 +92,4 @@ alias vc="variety --current"
 alias vh="variety --history"
 
 archey3
+. /etc/profile.d/vte.sh
