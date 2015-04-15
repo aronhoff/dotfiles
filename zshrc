@@ -90,6 +90,8 @@ alias vf="variety --move-to-favorites"
 alias vrd="variety --downloads"
 alias vc="variety --current"
 alias vh="variety --history"
+alias kh="k -h"
+alias kah="k -ah"
 
 archey3
 . /etc/profile.d/vte.sh
