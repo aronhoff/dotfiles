@@ -111,6 +111,7 @@ set scrolloff=5
 nnoremap <leader><space> :nohlsearch<CR>
 nnoremap j gj
 nnoremap k gk
+set smartcase
 
 set t_Co=256
 colorscheme peachpuff
