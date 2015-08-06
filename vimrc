@@ -109,8 +109,6 @@ hi CursorLineNr cterm=none ctermbg=234 ctermfg=darkred
 autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview
 
-execute pathogen#infect()
-
 let g:indent_guides_auto_colors = 0
 let g:indent_guides_enable_on_vim_startup = 1
 hi IndentGuidesOdd ctermbg=234
