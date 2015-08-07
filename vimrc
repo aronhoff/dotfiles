@@ -117,9 +117,10 @@ hi IndentGuidesEven ctermbg=235
 set laststatus=2
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='murmur'
 
-:nnoremap <C-n> :bnext<CR>
-:nnoremap <C-m> :bprevious<CR>
+nnoremap <C-n> :bnext<CR>
+nnoremap <C-m> :bprevious<CR>
 
 set nocompatible              " be iMproved, required
 filetype off                  " required

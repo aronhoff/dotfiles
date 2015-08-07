@@ -49,6 +49,7 @@ plugins=(archlinux chucknorris sudo systemd web-search wd zsh-syntax-highlightin
 
 source $ZSH/oh-my-zsh.sh
 source ~/Developer/dotfiles/k/k.sh
+. /etc/profile.d/fzf.zsh
 
 # User configuration
 
