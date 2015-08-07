@@ -98,6 +98,7 @@ nnoremap <leader><space> :nohlsearch<CR>
 nnoremap j gj
 nnoremap k gk
 set smartcase
+set relativenumber
 
 set t_Co=256
 colorscheme peachpuff
@@ -115,6 +116,10 @@ hi IndentGuidesOdd ctermbg=234
 hi IndentGuidesEven ctermbg=235
 set laststatus=2
 let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled = 1
+
+:nnoremap <C-n> :bnext<CR>
+:nnoremap <C-m> :bprevious<CR>
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -123,8 +128,24 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'bling/vim-airline'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'joequery/Stupid-EasyMotion'
+Plugin 'tpope/vim-surround'
+Plugin 'rking/ag.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'sjl/gundo.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'kien/ctrlp.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 nnoremap : ;
 nnoremap ; :
+
+nnoremap <F5> :GundoToggle<CR>
+
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_confirm_extra_conf = 0
+
+set wildignore+=*/tmp/*,*.so,*.sw?,*~
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
