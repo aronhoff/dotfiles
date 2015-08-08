@@ -137,6 +137,7 @@ Plugin 'sjl/gundo.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'kien/ctrlp.vim'
+Plugin 'tmux-plugins/vim-tmux'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
