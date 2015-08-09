@@ -106,6 +106,8 @@ hi CursorLine cterm=none ctermbg=234
 hi CursorColomn cterm=none ctermbg=234
 hi LineNr cterm=none ctermbg=236 ctermfg=white
 hi CursorLineNr cterm=none ctermbg=234 ctermfg=darkred
+hi Pmenu ctermbg=26 ctermfg=white
+hi PmenuSel cterm=bold ctermfg=237
 
 autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview
@@ -138,6 +140,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tmux-plugins/vim-tmux'
+Plugin 'guns/xterm-color-table.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -151,3 +154,4 @@ let g:ycm_confirm_extra_conf = 0
 
 set wildignore+=*/tmp/*,*.so,*.sw?,*~
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+

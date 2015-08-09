@@ -61,3 +61,6 @@
 [submodule "tmux/plugins/tmux-copycat"]
 	path = tmux/plugins/tmux-copycat
 	url = https://github.com/tmux-plugins/tmux-copycat
+[submodule "vim/bundle/xterm-color-table.vim"]
+	path = vim/bundle/xterm-color-table.vim
+	url = https://github.com/guns/xterm-color-table.vim.git
