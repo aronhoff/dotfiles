@@ -141,6 +141,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tmux-plugins/vim-tmux'
 Plugin 'guns/xterm-color-table.vim'
+Plugin 'digitaltoad/vim-jade'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
