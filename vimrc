@@ -143,10 +143,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'tmux-plugins/vim-tmux'
 Plugin 'guns/xterm-color-table.vim'
 Plugin 'digitaltoad/vim-jade'
-" SnipMate
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
+Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -162,7 +159,6 @@ let g:ycm_confirm_extra_conf = 0
 set wildignore+=*/tmp/*,*.so,*.sw?,*~
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
-imap <C-J> <Plug>snipMateNextOrTrigger
-smap <C-J> <Plug>snipMateNextOrTrigger
-imap <C-K> <Plug>snipMateBack
-imap <C-L> <Plug>snipMateShow
+let g:UltiSnipsExpandTrigger="<c-l>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
