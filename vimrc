@@ -143,13 +143,17 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'tmux-plugins/vim-tmux'
 Plugin 'guns/xterm-color-table.vim'
 Plugin 'digitaltoad/vim-jade'
+Plugin 'wavded/vim-stylus'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'https://github.com/jiangmiao/auto-pairs'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 nnoremap : ;
 nnoremap ; :
+
+map <leader>n <C-w><C-w>
 
 nnoremap <F5> :GundoToggle<CR>
 

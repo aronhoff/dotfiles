@@ -86,3 +86,9 @@
 [submodule "vim/bundle/ultisnips"]
 	path = vim/bundle/ultisnips
 	url = https://github.com/SirVer/ultisnips
+[submodule "vim/bundle/auto-pairs"]
+	path = vim/bundle/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs
+[submodule "vim/bundle/vim-stylus"]
+	path = vim/bundle/vim-stylus
+	url = https://github.com/wavded/vim-stylus
