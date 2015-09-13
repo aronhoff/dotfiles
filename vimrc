@@ -146,6 +146,7 @@ Plugin 'wavded/vim-stylus'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'maksimr/vim-jsbeautify'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
