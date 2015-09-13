@@ -83,7 +83,6 @@ if !exists(":DiffOrig")
 		  \ | wincmd p | diffthis
 endif
 
-
 " custom
 set wildmenu
 set showmatch
@@ -166,3 +165,8 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:UltiSnipsExpandTrigger="<c-l>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+inoremap <leader>; <C-o>m`<C-o>A;<C-o>``
+inoremap <leader>, <C-o>m`<C-o>A,<C-o>``
+nnoremap <leader>; m`A;<ESC>``
+nnoremap <leader>, m`A,<ESC>``
