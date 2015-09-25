@@ -147,6 +147,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'maksimr/vim-jsbeautify'
+Plugin 'will133/vim-dirdiff'
 call vundle#end()            " required
 filetype plugin indent on    " required
 

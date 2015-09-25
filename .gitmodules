@@ -95,3 +95,6 @@
 [submodule "vim/bundle/vim-jsbeautify"]
 	path = vim/bundle/vim-jsbeautify
 	url = https://github.com/maksimr/vim-jsbeautify.git
+[submodule "vim/bundle/vim-dirdiff"]
+	path = vim/bundle/vim-dirdiff
+	url = https://github.com/will133/vim-dirdiff
