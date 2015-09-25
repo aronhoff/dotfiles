@@ -172,3 +172,4 @@ inoremap <leader>; <C-o>m`<C-o>A;<C-o>``
 inoremap <leader>, <C-o>m`<C-o>A,<C-o>``
 nnoremap <leader>; m`A;<ESC>``
 nnoremap <leader>, m`A,<ESC>``
+inoremap <leader><Return> <C-o>o
