@@ -82,16 +82,7 @@ unset SSH_ASKPASS
 #
 # Example aliases
 alias soundfetch="~/scripts/soundfetch.sh"
-#alias variety="/opt/extras.ubuntu.com/variety/bin/variety"
-alias vt="variety -t 2>&1 | grep -v -e pylint -e PyGIWarning -e gi.repository"
-alias vn="variety -n 2>&1 | grep -v -e pylint -e PyGIWarning -e gi.repository"
-alias vp="variety -p 2>&1 | grep -v -e pylint -e PyGIWarning -e gi.repository"
-alias vf="variety --move-to-favorites 2>&1 | grep -v -e pylint -e PyGIWarning -e gi.repository"
-alias vrd="variety --downloads 2>&1 | grep -v -e pylint -e PyGIWarning -e gi.repository"
-alias vc="variety --current 2>&1 | grep -v -e pylint -e PyGIWarning -e gi.repository"
-alias vh="variety --history 2>&1 | grep -v -e pylint -e PyGIWarning -e gi.repository"
 alias kh="k -h"
 alias kah="k -ah"
 
 archey3
-. /etc/profile.d/vte.sh
