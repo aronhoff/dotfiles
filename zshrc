@@ -85,15 +85,7 @@ unset SSH_ASKPASS
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias soundfetch="~/scripts/soundfetch.sh"
 #alias variety="/opt/extras.ubuntu.com/variety/bin/variety"
-alias vt="variety -t"
-alias vn="variety -n"
-alias vp="variety -p"
-alias vf="variety --move-to-favorites"
-alias vrd="variety --downloads"
-alias vc="variety --current"
-alias vh="variety --history"
 alias kh="k -h"
 alias kah="k -ah"
 
 archey3
-. /etc/profile.d/vte.sh
