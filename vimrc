@@ -148,6 +148,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'will133/vim-dirdiff'
+Plugin 'jeaye/color_coded'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
