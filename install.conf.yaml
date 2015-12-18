@@ -10,6 +10,7 @@
     ~/.gitignore: gitignore
     ~/.tmux.conf: tmux.conf
     ~/.tmux: tmux/
+    ~/.ycm_extra_conf.py: ycm_extra_conf.py
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
