@@ -45,7 +45,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(archlinux sudo systemd wd zsh-syntax-highlighting git)
+plugins=(archlinux sudo systemd wd zsh-syntax-highlighting git colored-man-pages bgnotify)
 
 source $ZSH/oh-my-zsh.sh
 source ~/Developer/dotfiles/k/k.sh

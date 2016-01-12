@@ -149,6 +149,7 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'will133/vim-dirdiff'
 Plugin 'jeaye/color_coded'
+Plugin '1995parham/vim-tcpdump'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
