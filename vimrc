@@ -98,6 +98,8 @@ nnoremap j gj
 nnoremap k gk
 set smartcase
 set relativenumber
+set textwidth=80
+set colorcolumn=+1
 
 set t_Co=256
 colorscheme peachpuff
@@ -107,6 +109,7 @@ hi LineNr cterm=none ctermbg=236 ctermfg=white
 hi CursorLineNr cterm=none ctermbg=234 ctermfg=darkred
 hi Pmenu ctermbg=26 ctermfg=white
 hi PmenuSel cterm=bold ctermfg=237
+hi colorcolumn ctermbg=235
 
 autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview
@@ -128,7 +131,8 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'joequery/Stupid-EasyMotion'
 Plugin 'tpope/vim-surround'
@@ -175,3 +179,10 @@ inoremap <leader>, <C-o>m`<C-o>A,<C-o>``
 nnoremap <leader>; m`A;<ESC>``
 nnoremap <leader>, m`A,<ESC>``
 inoremap <leader><Return> <C-o>o
+
+function AsmFile()
+	set ft=asm
+	highlight currawong ctermbg=237
+	match currawong /^	.*/
+endfunction
+command AsmFile call AsmFile()
