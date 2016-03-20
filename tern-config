@@ -1,0 +1,9 @@
+{
+	"plugins": {
+		"node": {},
+		"node_resolve": {},
+		"doc_comment": {},
+		"complete_strings": {},
+		"modules": {}
+	}
+}
