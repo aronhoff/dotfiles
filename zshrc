@@ -81,17 +81,15 @@ unset SSH_ASKPASS
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 alias soundfetch="~/scripts/soundfetch.sh"
 #alias variety="/opt/extras.ubuntu.com/variety/bin/variety"
-alias vt="variety -t"
-alias vn="variety -n"
-alias vp="variety -p"
-alias vf="variety --move-to-favorites"
-alias vrd="variety --downloads"
-alias vc="variety --current"
-alias vh="variety --history"
+alias vt="variety -t 2>&1 | grep -v -e pylint -e PyGIWarning -e gi.repository"
+alias vn="variety -n 2>&1 | grep -v -e pylint -e PyGIWarning -e gi.repository"
+alias vp="variety -p 2>&1 | grep -v -e pylint -e PyGIWarning -e gi.repository"
+alias vf="variety --move-to-favorites 2>&1 | grep -v -e pylint -e PyGIWarning -e gi.repository"
+alias vrd="variety --downloads 2>&1 | grep -v -e pylint -e PyGIWarning -e gi.repository"
+alias vc="variety --current 2>&1 | grep -v -e pylint -e PyGIWarning -e gi.repository"
+alias vh="variety --history 2>&1 | grep -v -e pylint -e PyGIWarning -e gi.repository"
 alias kh="k -h"
 alias kah="k -ah"
 
