@@ -49,7 +49,7 @@ plugins=(archlinux sudo systemd wd zsh-syntax-highlighting git colored-man-pages
 
 source $ZSH/oh-my-zsh.sh
 source ~/Developer/dotfiles/k/k.sh
-. /etc/profile.d/fzf.zsh
+. /usr/share/fzf/key-bindings.zsh
 
 # User configuration
 
