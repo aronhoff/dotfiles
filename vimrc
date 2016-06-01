@@ -179,6 +179,10 @@ nnoremap <leader>; m`A;<ESC>``
 nnoremap <leader>, m`A,<ESC>``
 inoremap <leader><Return> <C-o>o
 
+" Close documentation
+inoremap <leader>p <C-o>:pc<CR>
+nnoremap <leader>p :pc<CR>
+
 function AsmFile()
 	set ft=asm
 	highlight currawong ctermbg=237
