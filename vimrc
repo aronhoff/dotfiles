@@ -153,6 +153,7 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'will133/vim-dirdiff'
 Plugin 'jeaye/color_coded'
+Plugin 'klen/python-mode'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -172,6 +173,9 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:UltiSnipsExpandTrigger="<c-l>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+let g:pymode_rope_completion = 0
+let g:pymode_python='python3'
 
 inoremap <leader>; <C-o>m`<C-o>A;<C-o>``
 inoremap <leader>, <C-o>m`<C-o>A,<C-o>``

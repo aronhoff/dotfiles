@@ -93,5 +93,7 @@ alias vh="variety --history 2>&1 | grep -v -e pylint -e PyGIWarning -e gi.reposi
 alias kh="k -h"
 alias kah="k -ah"
 
+alias suss="systemctl suspend"
+
 archey3
 . /etc/profile.d/vte.sh
