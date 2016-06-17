@@ -53,7 +53,7 @@ source ~/Developer/dotfiles/k/k.sh
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$(ruby -rubygems -e 'puts Gem.user_dir')/bin"
 export EDITOR="vim"
 
 # export MANPATH="/usr/local/man:$MANPATH"
