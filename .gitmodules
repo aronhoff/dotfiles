@@ -98,3 +98,6 @@
 [submodule "vim/bundle/python-mode"]
 	path = vim/bundle/python-mode
 	url = https://github.com/klen/python-mode
+[submodule "vim/bundle/vim-nuuid"]
+	path = vim/bundle/vim-nuuid
+	url = https://github.com/kburdett/vim-nuuid

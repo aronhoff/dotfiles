@@ -154,6 +154,7 @@ Plugin 'maksimr/vim-jsbeautify'
 Plugin 'will133/vim-dirdiff'
 Plugin 'jeaye/color_coded'
 Plugin 'klen/python-mode'
+Plugin 'kburdett/vim-nuuid'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
