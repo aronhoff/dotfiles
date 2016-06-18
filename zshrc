@@ -90,6 +90,7 @@ alias vf="variety --move-to-favorites 2>&1 | grep -v -e pylint -e PyGIWarning -e
 alias vrd="variety --downloads 2>&1 | grep -v -e pylint -e PyGIWarning -e gi.repository"
 alias vc="variety --current 2>&1 | grep -v -e pylint -e PyGIWarning -e gi.repository"
 alias vh="variety --history 2>&1 | grep -v -e pylint -e PyGIWarning -e gi.repository"
+alias vpause="variety --toggle-pause 2>&1 | grep -v -e pylint -e PyGIWarning -e gi.repository"
 alias kh="k -h"
 alias kah="k -ah"
 
