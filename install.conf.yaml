@@ -3,6 +3,7 @@
 - link:
     ~/.vim: vim/
     ~/.vimrc: vimrc
+    ~/.ideavimrc: ideavimrc
     ~/.zshrc: zshrc
     ~/.gitconfig: gitconfig
     ~/scripts: scripts
