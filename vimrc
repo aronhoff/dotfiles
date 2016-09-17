@@ -80,7 +80,7 @@ endif " has("autocmd")
 " Only define it when not defined already.
 if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
-		  \ | wincmd p | diffthis
+          \ | wincmd p | diffthis
 endif
 
 " custom
@@ -96,6 +96,7 @@ set scrolloff=5
 nnoremap <leader><space> :nohlsearch<CR>
 nnoremap j gj
 nnoremap k gk
+set ignorecase
 set smartcase
 set relativenumber
 set textwidth=80
@@ -155,6 +156,7 @@ Plugin 'will133/vim-dirdiff'
 Plugin 'jeaye/color_coded'
 Plugin 'klen/python-mode'
 Plugin 'kburdett/vim-nuuid'
+Plugin 'airblade/vim-gitgutter'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -189,8 +191,8 @@ inoremap <leader>p <C-o>:pc<CR>
 nnoremap <leader>p :pc<CR>
 
 function AsmFile()
-	set ft=asm
-	highlight currawong ctermbg=237
-	match currawong /^	.*/
+  set ft=asm
+  highlight currawong ctermbg=237
+  match currawong /^	.*/
 endfunction
 command AsmFile call AsmFile()

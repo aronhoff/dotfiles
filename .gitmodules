@@ -104,3 +104,6 @@
 [submodule "zsh-autosuggestions"]
 	path = zsh-autosuggestions
 	url = git://github.com/zsh-users/zsh-autosuggestions
+[submodule "vim/bundle/vim-gitgutter"]
+	path = vim/bundle/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter
