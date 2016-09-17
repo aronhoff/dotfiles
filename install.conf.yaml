@@ -1,3 +1,7 @@
+- defaults:
+    link:
+        relink: true
+
 - clean: ['~']
 
 - link:
@@ -16,5 +20,9 @@
     ~/.tern-config: tern-config
 
 - shell:
-    - [git submodule update --init --recursive, Installing submodules]
+    -
+      command: git submodule update --init --recursive
+      description: Installing submodules
+      stdout: true
     - [fonts/install.sh, Installing Powerline fonts]
+    - ['', Run scripts in 'installers' to compile modules!]
