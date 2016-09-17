@@ -101,3 +101,6 @@
 [submodule "vim/bundle/vim-nuuid"]
 	path = vim/bundle/vim-nuuid
 	url = https://github.com/kburdett/vim-nuuid
+[submodule "zsh-autosuggestions"]
+	path = zsh-autosuggestions
+	url = git://github.com/zsh-users/zsh-autosuggestions

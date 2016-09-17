@@ -8,6 +8,7 @@
     ~/.gitconfig: gitconfig
     ~/scripts: scripts
     ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting: zsh-syntax-highlighting/
+    ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions: zsh-autosuggestions/
     ~/.gitignore: gitignore
     ~/.tmux.conf: tmux.conf
     ~/.tmux: tmux/
