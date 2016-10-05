@@ -86,8 +86,9 @@ endif
 " custom
 set wildmenu
 set showmatch
-set shiftwidth=4
+set shiftwidth=0
 set tabstop=4
+set expandtab
 vnoremap <silent> * :call VisualSelection('f')<CR>
 set cursorline
 set number
@@ -138,7 +139,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'joequery/Stupid-EasyMotion'
 Plugin 'tpope/vim-surround'
 Plugin 'rking/ag.vim'
-Plugin 'thehoffmann/vim-javascript'
+Plugin 'aronhoff/vim-javascript'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'sjl/gundo.vim'
 Plugin 'scrooloose/nerdtree'
@@ -169,6 +170,7 @@ nnoremap <F5> :GundoToggle<CR>
 
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
+let g:ycm_autoclose_preview_window_after_insertion = 1
 
 set wildignore+=*/tmp/*,*.so,*.sw?,*~
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
