@@ -112,6 +112,8 @@ hi CursorLineNr cterm=none ctermbg=234 ctermfg=darkred
 hi Pmenu ctermbg=26 ctermfg=white
 hi PmenuSel cterm=bold ctermfg=237
 hi colorcolumn ctermbg=235
+hi SpellBad ctermbg=052
+hi SpellCap ctermbg=208
 
 autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview
@@ -144,6 +146,7 @@ Plugin 'marijnh/tern_for_vim'
 Plugin 'sjl/gundo.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tmux-plugins/vim-tmux'
 Plugin 'guns/xterm-color-table.vim'
@@ -171,6 +174,19 @@ nnoremap <F5> :GundoToggle<CR>
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_show_diagnostics_ui = 0
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_aggregate_errors = 1
+let g:syntastic_loc_list_height = 5
+let g:syntastic_cpp_cpplint_exec = 'cpplint'
 
 set wildignore+=*/tmp/*,*.so,*.sw?,*~
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
