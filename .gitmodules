@@ -13,12 +13,6 @@
 [submodule "fonts"]
 	path = fonts
 	url = https://github.com/powerline/fonts.git
-[submodule "zsh-syntax-highlighting"]
-	path = zsh-syntax-highlighting
-	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
-[submodule "k"]
-	path = k
-	url = https://github.com/supercrabtree/k.git
 [submodule "vim/bundle/Stupid-EasyMotion"]
 	path = vim/bundle/Stupid-EasyMotion
 	url = https://github.com/joequery/Stupid-EasyMotion
@@ -98,12 +92,18 @@
 [submodule "vim/bundle/vim-nuuid"]
 	path = vim/bundle/vim-nuuid
 	url = https://github.com/kburdett/vim-nuuid
-[submodule "zsh-autosuggestions"]
-	path = zsh-autosuggestions
-	url = git://github.com/zsh-users/zsh-autosuggestions
 [submodule "vim/bundle/vim-gitgutter"]
 	path = vim/bundle/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter
 [submodule "vim/bundle/syntastic"]
 	path = vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic
+[submodule "zsh/plugins/zsh-autosuggestions"]
+	path = zsh/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "zsh/plugins/zsh-syntax-highlighting"]
+	path = zsh/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting
+[submodule "zsh/plugins/k"]
+	path = zsh/plugins/k
+	url = https://github.com/supercrabtree/k
