@@ -89,6 +89,7 @@ set showmatch
 set shiftwidth=0
 set tabstop=4
 set expandtab
+autocmd FileType make set noexpandtab
 vnoremap <silent> * :call VisualSelection('f')<CR>
 set cursorline
 set number
