@@ -170,6 +170,9 @@ filetype plugin indent on    " required
 
 nnoremap : ;
 nnoremap ; :
+nmap <leader>z <C-w>
+imap <leader>z <C-o><C-w>
+vmap <leader>z <C-o><C-w>
 map <leader>q :NERDTreeToggle<CR>
 
 map <leader>n <C-w><C-w>
@@ -192,6 +195,9 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_loc_list_height = 5
 let g:syntastic_cpp_cpplint_exec = 'cpplint'
+let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = ' -std=c++11 -Wall'
+
 " NERDCommenter
 let g:NERDSpaceDelims = 1
 
