@@ -162,11 +162,15 @@ Plugin 'jeaye/color_coded'
 Plugin 'klen/python-mode'
 Plugin 'kburdett/vim-nuuid'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 nnoremap : ;
 nnoremap ; :
+map <leader>q :NERDTreeToggle<CR>
 
 map <leader>n <C-w><C-w>
 
@@ -188,6 +192,14 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_loc_list_height = 5
 let g:syntastic_cpp_cpplint_exec = 'cpplint'
+" NERDCommenter
+let g:NERDSpaceDelims = 1
+
+let g:NERDTreeFileExtensionHighlightFullName = 1
+let g:NERDTreeExactMatchHighlightFullName = 1
+let g:NERDTreePatternMatchHighlightFullName = 1
+let g:NERDTreeExtensionHighlightColor = {} " this line is needed to avoid error
+let g:NERDTreeExtensionHighlightColor['h'] = '7F7F7F' " C/C++ header files
 
 set wildignore+=*/tmp/*,*.so,*.sw?,*~
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
