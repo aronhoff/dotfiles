@@ -19,6 +19,7 @@
     ~/.tmux: tmux/
     ~/.ycm_extra_conf.py: ycm_extra_conf.py
     ~/.tern-config: tern-config
+    ~/.color_coded: color_coded
 
 - shell:
     -
