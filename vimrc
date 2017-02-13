@@ -165,6 +165,8 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'tpope/vim-fugitive'
+Plugin 'jreybert/vimagit'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
