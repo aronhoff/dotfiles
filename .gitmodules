@@ -4,39 +4,12 @@
 [submodule "vim/bundle/Vundle.vim"]
 	path = vim/bundle/Vundle.vim
 	url = https://github.com/gmarik/Vundle.vim.git
-[submodule "vim/bundle/vim-airline"]
-	path = vim/bundle/vim-airline
-	url = https://github.com/bling/vim-airline.git
-[submodule "vim/bundle/vim-indent-guides"]
-	path = vim/bundle/vim-indent-guides
-	url = https://github.com/nathanaelkane/vim-indent-guides.git
 [submodule "fonts"]
 	path = fonts
 	url = https://github.com/powerline/fonts.git
-[submodule "vim/bundle/Stupid-EasyMotion"]
-	path = vim/bundle/Stupid-EasyMotion
-	url = https://github.com/joequery/Stupid-EasyMotion
-[submodule "vim/bundle/vim-surround"]
-	path = vim/bundle/vim-surround
-	url = https://github.com/tpope/vim-surround
-[submodule "vim/bundle/gundo.vim"]
-	path = vim/bundle/gundo.vim
-	url = https://github.com/sjl/gundo.vim
-[submodule "vim/bundle/nerdtree"]
-	path = vim/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree
-[submodule "vim/bundle/YouCompleteMe"]
-	path = vim/bundle/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe
-[submodule "vim/bundle/ctrlp.vim"]
-	path = vim/bundle/ctrlp.vim
-	url = https://github.com/kien/ctrlp.vim
 [submodule "tmux/plugins/tpm"]
 	path = tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
-[submodule "vim/bundle/vim-tmux"]
-	path = vim/bundle/vim-tmux
-	url = https://github.com/tmux-plugins/vim-tmux
 [submodule "tmux/plugins/tmux-open"]
 	path = tmux/plugins/tmux-open
 	url = https://github.com/tmux-plugins/tmux-open
@@ -49,55 +22,6 @@
 [submodule "tmux/plugins/tmux-copycat"]
 	path = tmux/plugins/tmux-copycat
 	url = https://github.com/tmux-plugins/tmux-copycat
-[submodule "vim/bundle/xterm-color-table.vim"]
-	path = vim/bundle/xterm-color-table.vim
-	url = https://github.com/guns/xterm-color-table.vim.git
-	ignore = untracked
-[submodule "vim/bundle/vim-jade"]
-	path = vim/bundle/vim-jade
-	url = https://github.com/digitaltoad/vim-jade
-[submodule "vim/bundle/vim-javascript"]
-	path = vim/bundle/vim-javascript
-	url = https://github.com/thehoffmann/vim-javascript
-[submodule "vim/bundle/tern_for_vim"]
-	path = vim/bundle/tern_for_vim
-	url = https://github.com/marijnh/tern_for_vim
-[submodule "vim/bundle/vim-snippets"]
-	path = vim/bundle/vim-snippets
-	url = https://github.com/honza/vim-snippets
-[submodule "vim/bundle/ultisnips"]
-	path = vim/bundle/ultisnips
-	url = https://github.com/SirVer/ultisnips
-[submodule "vim/bundle/auto-pairs"]
-	path = vim/bundle/auto-pairs
-	url = https://github.com/jiangmiao/auto-pairs
-[submodule "vim/bundle/vim-stylus"]
-	path = vim/bundle/vim-stylus
-	url = https://github.com/wavded/vim-stylus
-[submodule "vim/bundle/vim-jsbeautify"]
-	path = vim/bundle/vim-jsbeautify
-	url = https://github.com/maksimr/vim-jsbeautify.git
-[submodule "vim/bundle/vim-dirdiff"]
-	path = vim/bundle/vim-dirdiff
-	url = https://github.com/will133/vim-dirdiff
-[submodule "vim/bundle/color_coded"]
-	path = vim/bundle/color_coded
-	url = https://github.com/jeaye/color_coded
-[submodule "vim/bundle/vim-airline-themes"]
-	path = vim/bundle/vim-airline-themes
-	url = https://github.com/vim-airline/vim-airline-themes
-[submodule "vim/bundle/python-mode"]
-	path = vim/bundle/python-mode
-	url = https://github.com/klen/python-mode
-[submodule "vim/bundle/vim-nuuid"]
-	path = vim/bundle/vim-nuuid
-	url = https://github.com/kburdett/vim-nuuid
-[submodule "vim/bundle/vim-gitgutter"]
-	path = vim/bundle/vim-gitgutter
-	url = https://github.com/airblade/vim-gitgutter
-[submodule "vim/bundle/syntastic"]
-	path = vim/bundle/syntastic
-	url = https://github.com/scrooloose/syntastic
 [submodule "zsh/plugins/zsh-autosuggestions"]
 	path = zsh/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions
@@ -107,24 +31,3 @@
 [submodule "zsh/plugins/k"]
 	path = zsh/plugins/k
 	url = https://github.com/supercrabtree/k
-[submodule "vim/bundle/nerdcommenter"]
-	path = vim/bundle/nerdcommenter
-	url = https://github.com/scrooloose/nerdcommenter
-[submodule "vim/bundle/vim-nerdtree-syntax-highlight"]
-	path = vim/bundle/vim-nerdtree-syntax-highlight
-	url = https://github.com/tiagofumo/vim-nerdtree-syntax-highlight
-[submodule "vim/bundle/nerdtree-git-plugin"]
-	path = vim/bundle/nerdtree-git-plugin
-	url = https://github.com/Xuyuanp/nerdtree-git-plugin
-[submodule "vim/bundle/vim-fugitive"]
-	path = vim/bundle/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive
-[submodule "vim/bundle/vimagit"]
-	path = vim/bundle/vimagit
-	url = https://github.com/jreybert/vimagit
-[submodule "vim/bundle/a.vim"]
-	path = vim/bundle/a.vim
-	url = https://github.com/vim-scripts/a.vim
-[submodule "vim/bundle/vim-repeat"]
-	path = vim/bundle/vim-repeat
-	url = https://github.com/tpope/vim-repeat
