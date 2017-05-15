@@ -52,7 +52,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$(ruby -rubygems -e 'puts Gem.user_dir')/bin"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$HOME/.cargo/bin:$(ruby -rubygems -e 'puts Gem.user_dir')/bin:/usr/bin/core_perl"
 export EDITOR="vim"
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
@@ -97,6 +97,9 @@ alias kah="k -ah"
 
 alias suss="systemctl suspend"
 alias puff="systemctl poweroff"
+
+# Override archlinux plugin
+alias paupg="pacaur -Syu"
 
 archey3
 . /etc/profile.d/vte.sh

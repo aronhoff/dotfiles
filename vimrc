@@ -167,16 +167,23 @@ Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-fugitive'
 Plugin 'jreybert/vimagit'
-Plugin 'https://github.com/vim-scripts/a.vim'
+Plugin 'vim-scripts/a.vim'
+Plugin 'tpope/vim-repeat'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 nnoremap : ;
 nnoremap ; :
+
+" Window handling shortcuts
 nmap <leader>z <C-w>
 imap <leader>z <C-o><C-w>
 vmap <leader>z <C-o><C-w>
-map <leader>q :NERDTreeToggle<CR>
+
+" Alternate source file shortcuts
+nnoremap <leader>aa :A<CR>
+nnoremap <leader>as :AS<CR>
+nnoremap <leader>av :AV<CR>
 
 map <leader>n <C-w><C-w>
 

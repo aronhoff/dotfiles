@@ -3,5 +3,5 @@ cd "../vim/bundle/color_coded"
 rm -rf "build"
 mkdir "build"
 cd "build"
-cmake ..
-make && make install && make clean && make clean_clang
+cmake .. -DDOWNLOAD_CLANG=0
+make && make install && make clean
