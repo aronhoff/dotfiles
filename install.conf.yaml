@@ -26,5 +26,9 @@
       command: git submodule update --init --recursive
       description: Installing submodules
       stdout: true
+    - 
+      command: curl -L --create-dirs -o ~/.vim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+      description: Downloading vim-plug
+      stderr: true
     - [fonts/install.sh, Installing Powerline fonts]
     - ['', Run scripts in 'installers' to compile modules!]

@@ -70,6 +70,9 @@ nnoremap <leader>, m`A,<ESC>``
 " Start on new line
 inoremap <leader><Return> <C-o>o
 
+" Replace current word
+nnoremap <Leader>s m`:%s/\<<C-r><C-w>\>/<C-r><C-w>
+
 " Alternate source file shortcuts
 nnoremap <leader>aa :A<CR>
 nnoremap <leader>as :AS<CR>
@@ -129,6 +132,7 @@ hi PmenuSel cterm=bold ctermfg=237
 hi colorcolumn ctermbg=235
 hi SpellBad ctermbg=052
 hi SpellCap ctermbg=208
+hi Search ctermbg=18
 
 " Indent guides
 let g:indent_guides_auto_colors = 0
@@ -141,63 +145,12 @@ let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='murmur'
 
-set nocompatible              " be iMproved, required
-filetype off                  " required
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'joequery/Stupid-EasyMotion'
-Plugin 'tpope/vim-surround'
-Plugin 'aronhoff/vim-javascript'
-Plugin 'marijnh/tern_for_vim'
-Plugin 'sjl/gundo.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'scrooloose/syntastic'
-Plugin 'tmux-plugins/vim-tmux'
-Plugin 'guns/xterm-color-table.vim'
-Plugin 'digitaltoad/vim-jade'
-Plugin 'wavded/vim-stylus'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'maksimr/vim-jsbeautify'
-Plugin 'will133/vim-dirdiff'
-Plugin 'jeaye/color_coded'
-Plugin 'kburdett/vim-nuuid'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'tpope/vim-fugitive'
-Plugin 'jreybert/vimagit'
-Plugin 'vim-scripts/a.vim'
-Plugin 'tpope/vim-repeat'
-call vundle#end()            " required
-filetype plugin indent on    " required
-
 " YouCompleteMe
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_show_diagnostics_ui = 0
-
-" Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_aggregate_errors = 1
-let g:syntastic_loc_list_height = 5
-let g:syntastic_cpp_cpplint_exec = 'cpplint'
-let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = ' -std=c++11 -Wall'
+nnoremap <leader>gg :YcmCompleter GoTo<CR>
 
 " NERDCommenter
 let g:NERDSpaceDelims = 1
@@ -213,3 +166,53 @@ let g:NERDTreeExtensionHighlightColor['h'] = '7F7F7F' " C/C++ header files
 let g:UltiSnipsExpandTrigger="<c-l>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+" Syntastic
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_aggregate_errors = 1
+let g:syntastic_loc_list_height = 5
+let g:syntastic_cpp_cpplint_exec = 'cpplint'
+let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = ' -std=c++11 -Wall'
+
+call plug#begin('~/.vim/plugged')
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'tpope/vim-surround'
+Plug 'aronhoff/vim-javascript', { 'for': 'javascript' }
+Plug 'marijnh/tern_for_vim', { 'for': 'javascript' }
+Plug 'sjl/gundo.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --system-libclang --racer-completer --tern-completer' }
+Plug 'scrooloose/syntastic'
+Plug 'tmux-plugins/vim-tmux', { 'for': 'tmux' }
+Plug 'guns/xterm-color-table.vim', { 'on': 'XTermColorTable' }
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'jiangmiao/auto-pairs'
+Plug 'maksimr/vim-jsbeautify', { 'for': 'javascript' }
+Plug 'will133/vim-dirdiff'
+Plug 'arakashic/chromatica.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'airblade/vim-gitgutter'
+Plug 'scrooloose/nerdcommenter'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-scripts/a.vim'
+Plug 'tpope/vim-repeat'
+Plug 'dzeban/vim-log-syntax'
+Plug 'haya14busa/incsearch.vim'
+Plug 'easymotion/vim-easymotion'
+Plug 'haya14busa/incsearch-easymotion.vim'
+Plug 'yuttie/comfortable-motion.vim'
+Plug 'powerman/vim-plugin-AnsiEsc'
+call plug#end()
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
