@@ -1,5 +1,3 @@
 vim/view
 tmux/resurrect
-
-vim/bundle/*
-!vim/bundle/Vundle.vim
+vim/plugged

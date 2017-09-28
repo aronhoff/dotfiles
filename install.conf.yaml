@@ -7,10 +7,12 @@
 - link:
     ~/.vim: vim/
     ~/.vimrc: vimrc
+    ~/.config/nvim/init.vim: 
+        create: true
+        path: nvim/init.vim
     ~/.ideavimrc: ideavimrc
     ~/.zshrc: zshrc
     ~/.gitconfig: gitconfig
-    ~/scripts: scripts
     ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting: zsh/plugins/zsh-syntax-highlighting/
     ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions: zsh/plugins/zsh-autosuggestions/
     ~/.oh-my-zsh/custom/plugins/k: zsh/plugins/k/
@@ -30,5 +32,4 @@
       command: curl -L --create-dirs -o ~/.vim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
       description: Downloading vim-plug
       stderr: true
-    - [fonts/install.sh, Installing Powerline fonts]
     - ['', Run scripts in 'installers' to compile modules!]
