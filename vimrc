@@ -15,13 +15,15 @@ set list
 set listchars=tab:➜\ 
 set expandtab                   " tabs into spaces
 set cursorline                  " highlight current line
-set relativenumber              " print relative line numbers
+set number                      " print current line number
+set relativenumber              " print relative line numbers for other lines
 set scrolloff=5                 " scroll when less than 5 lines away from the top/bottom of screen
 set ignorecase                  " search case-insensitive when all lower-case
 set smartcase                   " search case-sensistive when there is at least one upper case char
 set colorcolumn=+1              " colour column 'textwidth'+1
 set laststatus=2                " always draw status line in last window
 set wildignore+=*/tmp/*,*.so,*.sw?,*~
+set lazyredraw                  " speeds up scrolling significantly
 syntax on
 
 " Don't use Ex mode, use Q for formatting
@@ -58,17 +60,17 @@ vmap <leader>z <C-o><C-w>
 map <leader>n <C-w><C-w>
 
 " Close documentation
-inoremap <leader>p <C-o>:pc<CR>
-nnoremap <leader>p :pc<CR>
+inoremap <leader>pp <C-o>:pc<CR>
+nnoremap <leader>pp :pc<CR>
+
+" Easy typing of \
+inoremap <leader><leader> <leader>
 
 " Put comma or semicolon at the end of the line
 inoremap <leader>; <C-o>m`<C-o>A;<C-o>``
 inoremap <leader>, <C-o>m`<C-o>A,<C-o>``
 nnoremap <leader>; m`A;<ESC>``
 nnoremap <leader>, m`A,<ESC>``
-
-" Start on new line
-inoremap <leader><Return> <C-o>o
 
 " Replace current word
 nnoremap <Leader>s m`:%s/\<<C-r><C-w>\>/<C-r><C-w>
@@ -118,11 +120,10 @@ autocmd BufReadPost *
 \ endif
 
 autocmd BufWinLeave *.* mkview
-autocmd BufWinEnter *.* silent loadview
+autocmd BufWinEnter *.* silent! loadview
 
 " Colours
 set t_Co=256
-colorscheme peachpuff
 hi CursorLine cterm=none ctermbg=234
 hi CursorColomn cterm=none ctermbg=234
 hi LineNr cterm=none ctermbg=236 ctermfg=white
@@ -139,11 +140,6 @@ let g:indent_guides_auto_colors = 0
 let g:indent_guides_enable_on_vim_startup = 1
 hi IndentGuidesOdd ctermbg=234
 hi IndentGuidesEven ctermbg=235
-
-" Airline
-let g:airline_powerline_fonts=1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='murmur'
 
 " YouCompleteMe
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
@@ -188,7 +184,7 @@ Plug 'marijnh/tern_for_vim', { 'for': 'javascript' }
 Plug 'sjl/gundo.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --system-libclang --racer-completer --tern-completer' }
-Plug 'scrooloose/syntastic'
+Plug 'w0rp/ale'
 Plug 'tmux-plugins/vim-tmux', { 'for': 'tmux' }
 Plug 'guns/xterm-color-table.vim', { 'on': 'XTermColorTable' }
 Plug 'SirVer/ultisnips'
@@ -210,9 +206,60 @@ Plug 'easymotion/vim-easymotion'
 Plug 'haya14busa/incsearch-easymotion.vim'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'powerman/vim-plugin-AnsiEsc'
+Plug 'tpope/tpope-vim-abolish'
+Plug 'lervag/vimtex', { 'for': ['plaintex', 'tex'] }
+Plug 'hdima/python-syntax', { 'for': 'python' }
+Plug 'PeterRincker/vim-argumentative'
+Plug 'machakann/vim-swap'
+Plug 'chrisbra/csv.vim'
+Plug 'joshdick/onedark.vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'AndrewRadev/linediff.vim'
+Plug 'KeitaNakamura/tex-conceal.vim', { 'for': 'tex' }
+Plug 'hzchirs/vim-material'
 call plug#end()
+
+" Onedark
+colorscheme onedark
+let g:onedark_terminal_italics = 1
+if (has("nvim"))
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
+if (has("termguicolors"))
+    set termguicolors
+endif
+
+" Latex
+let g:polyglot_disabled = ['latex']
+
+" Airline
+let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='onedark'
+
+" Ale
+let g:ale_linters = {
+\   'tex': ['chktex'],
+\}
+let g:airline#extensions#ale#enabled = 1
+let g:ale_set_quickfix = 1
+let g:ale_open_list = 1
+nmap <silent> <C-a> <Plug>(ale_previous_wrap)
+nmap <silent> <C-s> <Plug>(ale_next_wrap)
 
 " Syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+
+"EasyMotion
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+nmap <Space>f <Plug>(easymotion-overwin-f)
+let g:EasyMotion_smartcase = 1
+let g:EasyMotion_use_smartsign_us = 1
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>h <Plug>(easymotion-linebackward)

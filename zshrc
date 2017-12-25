@@ -15,7 +15,7 @@ COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="dd/mm/yyyy"
 
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(archlinux sudo systemd wd zsh-syntax-highlighting git colored-man-pages bgnotify zsh-autosuggestions k rust cargo)
+plugins=(archlinux sudo systemd wd zsh-syntax-highlighting git colored-man-pages bgnotify zsh-autosuggestions k rust cargo pipenv)
 
 source $ZSH/oh-my-zsh.sh
 . /usr/share/fzf/key-bindings.zsh
@@ -25,6 +25,8 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 export EDITOR="nvim"
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
+
+TERM=xterm-256color
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
