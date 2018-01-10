@@ -21,12 +21,16 @@ source $ZSH/oh-my-zsh.sh
 . /usr/share/fzf/key-bindings.zsh
 
 # User configuration
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$HOME/.cargo/bin:$(ruby -rubygems -e 'puts Gem.user_dir')/bin:/usr/bin/core_perl"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$HOME/.cargo/bin:$(ruby -rrubygems -e 'puts Gem.user_dir')/bin"
+source /etc/profile.d/perlbin.sh
+
 export EDITOR="nvim"
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=6'
 
 TERM=xterm-256color
+
+setopt extendedglob
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"

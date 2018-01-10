@@ -5,6 +5,7 @@ set history=500                 " keep command line history
 set ruler                       " show the cursor position all the time
 set showcmd                     " display incomplete commands
 set incsearch                   " incremental seach
+set inccommand=nosplit          " live substitute
 set hlsearch                    " highlight last search result
 set wildmenu                    " tab completion for : mode
 set showmatch                   " show matching braces
