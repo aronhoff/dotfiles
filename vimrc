@@ -84,6 +84,25 @@ nnoremap <leader>av :AV<CR>
 " Gundo
 nnoremap <F5> :GundoToggle<CR>
 
+function! LcloseAndQuit(w, f)
+    if a:w
+        write
+    endif
+    if a:f
+        lclose
+        q!
+    elseif !&mod
+        lclose
+        q
+    else
+        q " For the error message
+    endif
+endfunction
+cabbrev q call LcloseAndQuit(0, 0)
+cabbrev qf call LcloseAndQuit(0, 1)
+cabbrev wq call LcloseAndQuit(1, 0)
+
+
 if has('mouse')
   set mouse=a
 endif
@@ -143,11 +162,11 @@ hi IndentGuidesOdd ctermbg=234
 hi IndentGuidesEven ctermbg=235
 
 " YouCompleteMe
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-let g:ycm_confirm_extra_conf = 0
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_show_diagnostics_ui = 0
-nnoremap <leader>gg :YcmCompleter GoTo<CR>
+" let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+" let g:ycm_confirm_extra_conf = 0
+" let g:ycm_autoclose_preview_window_after_insertion = 1
+" let g:ycm_show_diagnostics_ui = 0
+" nnoremap <leader>gg :YcmCompleter GoTo<CR>
 
 " NERDCommenter
 let g:NERDSpaceDelims = 1
@@ -158,22 +177,14 @@ let g:NERDTreeExactMatchHighlightFullName = 1
 let g:NERDTreePatternMatchHighlightFullName = 1
 let g:NERDTreeExtensionHighlightColor = {} " this line is needed to avoid error
 let g:NERDTreeExtensionHighlightColor['h'] = '7F7F7F' " C/C++ header files
+let g:NERDTreeExtensionHighlightColor['tpp'] = '689FB6' " C++ template files
 
 " UltiSnips
 let g:UltiSnipsExpandTrigger="<c-l>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-
-" Syntastic
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_aggregate_errors = 1
-let g:syntastic_loc_list_height = 5
-let g:syntastic_cpp_cpplint_exec = 'cpplint'
-let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = ' -std=c++11 -Wall'
+let g:UltiSnipsRemoveSelectModeMappings = 0
+"inoremap <silent> <c-l> <c-r>=cm#sources#ultisnips#trigger_or_popup("\<Plug>(ultisnips_expand)")<cr>
 
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
@@ -184,13 +195,13 @@ Plug 'aronhoff/vim-javascript', { 'for': 'javascript' }
 Plug 'marijnh/tern_for_vim', { 'for': 'javascript' }
 Plug 'sjl/gundo.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --system-libclang --racer-completer --tern-completer' }
+"Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --system-libclang --racer-completer --tern-completer' }
 Plug 'w0rp/ale'
 Plug 'tmux-plugins/vim-tmux', { 'for': 'tmux' }
 Plug 'guns/xterm-color-table.vim', { 'on': 'XTermColorTable' }
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'jiangmiao/auto-pairs'
+" Plug 'jiangmiao/auto-pairs'
 Plug 'maksimr/vim-jsbeautify', { 'for': 'javascript' }
 Plug 'will133/vim-dirdiff'
 Plug 'arakashic/chromatica.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -216,9 +227,67 @@ Plug 'chrisbra/csv.vim'
 Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'AndrewRadev/linediff.vim'
-Plug 'KeitaNakamura/tex-conceal.vim', { 'for': 'tex' }
 Plug 'hzchirs/vim-material'
+" Plug 'roxma/nvim-completion-manager'
+"Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': ['bash install.sh', ':UpdateRemotePlugins']}
+Plug 'roxma/ncm-clang'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+if !has('nvim')
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
+endif
+if has('nvim')
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+    Plug 'Shougo/deoplete.nvim'
+endif
+Plug 'tweekmonster/deoplete-clang2'
+Plug 'zchee/deoplete-jedi'
+Plug 'racer-rust/vim-racer'
+Plug 'Shougo/neco-vim'
+Plug 'zchee/deoplete-zsh'
+Plug 'embear/vim-localvimrc'
+Plug 'bfrg/vim-cpp-modern'
+Plug 'cohama/lexima.vim'
+Plug 'godlygeek/tabular'
+
+" Keep devicons as last!
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
+
+" LocalVimrc
+let g:localvimrc_ask = 0
+
+" Deoplete
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_refresh_always = 1
+let g:deoplete#enable_camel_case = 1
+let g:deoplete#auto_complete_start_length = 1
+inoremap <expr><C-g> deoplete#undo_completion()
+inoremap <expr><C-space> pumvisible() ? deoplete#refresh() : "\<C-space>"
+" inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+" inoremap <expr><S-tab> pumvisible() ? "\<c-p>" : "\<S-tab>"
+
+" NVim Completion Manager
+" set shortmess+=c
+" inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+" inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" imap <C-Space> <Plug>(cm_force_refresh)
+" let g:cm_matcher = {'module': 'cm_matchers.abbrev_matcher', 'case': 'smartcase'}
+
+" LanguageClient Neovim
+" Required for operations modifying multiple buffers like rename.
+" set hidden
+" let g:LanguageClient_serverCommands = {
+    " \ 'cpp' : ['clangd'],
+    " \ 'rust': ['rustup', 'run', 'stable', 'rls'],
+    " \ }
+" let g:LanguageClient_trace = 'verbose'
+" let g:LanguageClient_loggingLevel = 'DEBUG'
+
+" nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
+" nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+" nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
 
 " Onedark
 colorscheme onedark
@@ -241,17 +310,13 @@ let g:airline_theme='onedark'
 " Ale
 let g:ale_linters = {
 \   'tex': ['chktex'],
+\   'cpp': ['clang'],
 \}
+let g:ale_cpp_clang_options = '-std=c++17 -Wall -Wextra'
 let g:airline#extensions#ale#enabled = 1
-let g:ale_set_quickfix = 1
 let g:ale_open_list = 1
 nmap <silent> <C-a> <Plug>(ale_previous_wrap)
 nmap <silent> <C-s> <Plug>(ale_next_wrap)
-
-" Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
 
 "EasyMotion
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
@@ -264,3 +329,7 @@ map <Leader>l <Plug>(easymotion-lineforward)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 map <Leader>h <Plug>(easymotion-linebackward)
+
+" Devicons
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {}
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['tpp'] = ''

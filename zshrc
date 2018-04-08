@@ -51,3 +51,5 @@ alias paupg="pacaur -Syu"
 
 archey3
 . /etc/profile.d/vte.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
